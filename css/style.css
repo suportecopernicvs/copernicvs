@@ -1,48 +1,43 @@
-/* @font-face{
-    font-family: Halvetica;
-    src: url(../fonts/Helvetica-Neue-Font/Helvetica\ Neue\ LT\ 45\ Light.woff);
-} */
 html,
 body {
   scroll-behavior: smooth;
   text-decoration: none;
   font-family: sans-serif;
   overflow-x: hidden;
-
 }
 
+/* Start header style */
 header {
   position: relative;
 }
 
-.header-bg {
-  background-color: rgb(25, 45, 80);
-  border-bottom: 8px solid rgb(50, 134, 161);
+li .nav-link{
+  font-size: 1rem !important;
+  font-weight: 500;
 }
 
 .navbar {
-  padding: 0 !important;
+  padding: 0rem !important;
   z-index: 100;
   position: fixed;
+}
 
-
-
+.headerLogo{
+  height: 4rem;
 }
 
 .nav-container {
   width: 100%;
   margin: 0 0.5em;
-  height: 6.25rem;
+  height: 5rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-
 }
 
 .navbar-toggler {
   border-radius: 0 !important;
   color: rgb(50, 134, 161) !important;
-  /* border-color: rgb(50,134,161)!important; */
 }
 
 .nav-container ul {
@@ -50,26 +45,11 @@ header {
   font-size: 15px;
   align-items: center;
   margin-bottom: 0 !important;
-
 }
 
 .nav-item {
   margin-right: 2.5rem;
-  
-}
-
-
-.offcanvas-end .nav-item a:hover {
-  background: linear-gradient(
-    to right, 
-    hwb(261 35% 6%), 
-    hsl(283, 67%, 51%),
-    hsl(310, 93%, 59%)
-   
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
+  font-size: .5rem;
 }
 
 .nav-container li:nth-child(5) {
@@ -96,28 +76,20 @@ a.button-link {
 
 .offcanvas-end {
   background-color: rgb(25, 45, 80) !important;
-
 }
 
 .offcanvas-end .nav-item a {
   transition: 0.8s;
-  
 }
 .gradient{
   justify-content: center;
-  /* display: flex; */
   background: transparent;
   background: linear-gradient( 
     to top, 
     hwb(261 13% 2%), 
     hsl(283, 79%, 37%),
     hsl(308, 86%, 56%) );
-  
-
 }
-
-
-
 
 .modal-body form {
   width: 90%;
@@ -148,10 +120,82 @@ a.button-link {
   flex-direction: column;
   align-items: center;
   color: aliceblue;
+}
 
+ /* <-- Start style footer --> */
+
+.separator{
+  height: .3rem;  
+  width: auto;
+  background: linear-gradient(90deg, #CE47FF 14.39%, #F71364 31.22%, #F71364 64.87%, #CE47FF 86.18%);
+}
+
+.footerLogo{
+  font-size: .5rem;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24rem;
+}
+
+.logo{
+  padding-left: 5rem;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #F71364;
+}
+
+.navFooter{
+  padding-left: 4rem;
+  color: #7C7C7C;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: #7C7C7C;
+}
+a:hover{
+  color: white;
 }
 
 
+.socialMedia{
+
+  gap: 1rem;
+  display: flex;
+  margin: 2rem
+}
+
+.copyright{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  height: 3rem;
+  color: #7C7C7C;
+}
+
+ /* <-- End style footer --> */
+
+  /* <-- Start Fixed Button --> */
+  .staticButton{
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    background-color: #F71364;
+  }
+  /* <-- End Fixed Button --> */
+  
 .scrolldown {
   --color: white;
   --sizeX: 30px;
@@ -163,7 +207,6 @@ a.button-link {
   border: calc(var(--sizeX) / 10) solid var(--color);
   border-radius: 50px;
   box-sizing: border-box;
-  
 }
 
 .scrolldown::before {
@@ -233,7 +276,6 @@ a.button-link {
     opacity: 0.5;
   }
 }
-/*copy until here */
 
 footer .icon{
   background: transparent;
@@ -250,16 +292,33 @@ footer .icon:hover{
   background: linear-gradient( 
     to top, 
     hwb(261 13% 2%), 
-    hsl(308, 86%, 56%)
-     );
+    hsl(308, 86%, 56%));
     color: aliceblue;
-  
+}
+
+/* ============================================================= Media Query ==================================================== */
+
+
+@media only screen and (max-width: 425px) {
+
+  .footerLogo{
+    display: none;
+  }
+
+  .socialMedia{
+    justify-content: end;
+  }
 
 }
 
+@media only screen and (max-width: 768px) {
 
-/* ============================================================= MEdia Query ==================================================== */
+  .socialMedia{
+    justify-content: end;
+    padding: 4rem;
+  }
 
+}
 
 @media only screen and (max-width: 992px) {
   .nav-container {
@@ -271,7 +330,6 @@ footer .icon:hover{
   .nav-container ul {
     align-items: flex-start;
     line-height: 2rem;
-
   }
 
   .navbar-light .navbar-nav .nav-link {
@@ -280,10 +338,6 @@ footer .icon:hover{
 
   .navbar-nav .dropdown-menu {
     margin-bottom: 8px !important;
-  }
-
-  .logo {
-    display: none;
   }
 
   .glowing-btn {
@@ -296,10 +350,6 @@ footer .icon:hover{
   .nav-container {
     width: 80%;
     margin: 0 auto;
-  }
-
-  .logo {
-    display: none;
   }
 
   .glowing-btn {
@@ -320,14 +370,9 @@ footer .icon:hover{
     margin-right: 0;
   }
 
-  .logo {
-    display: none;
-  }
-
   .glowing-btn {
     display: none;
   }
-
 
 }
 
@@ -353,32 +398,6 @@ footer .icon:hover{
   box-sizing: border-box;
 }
 
-
-
-/* .glowing-btn {
-  position: relative;
-  color: var(--glow-color);
-  cursor: pointer;
-  padding: 0.1em 1em;
-  border: 0.15em solid var(--glow-color);
-  border-radius: 0.45em;
-  background: none;
-  perspective: 1em;
-  font-family: "Raleway", sans-serif;
-  font-size: 1em;
-  font-weight: 900;
-
-  letter-spacing: 1em;
-
-  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
-    0px 0px 0.5em 0px var(--glow-color);
-  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
-    0px 0px 0.5em 0px var(--glow-color);
-  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
-    0px 0px 0.5em 0px var(--glow-color);
-  animation: border-flicker 2s linear infinite;
-} */
-
 .glowing-txt {
   float: left;
   
@@ -396,105 +415,6 @@ footer .icon:hover{
   animation: none;
 
 }
-
-/* .faulty-letter {
-  opacity: 0.5;
-  animation: faulty-flicker 2s linear infinite;
-} */
-
-/* .glowing-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0.7;
-  filter: blur(1em);
-  transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
-  background: var(--glow-color);
-  pointer-events: none;
-  
-} */
-
-/* .glowing-btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  z-index: -1;
-  background-color: var(--glow-color);
-  box-shadow: 0 0 2em 0.2em var(--glow-color);
-  transition: opacity 100ms linear;
-} */
-
-/* .glowing-btn:hover {
-  color: rgba(0, 0, 0, 0.8);
-  text-shadow: none;
-  animation: none;
-
-}
-
-.glowing-btn:hover .glowing-txt {
-  animation: none;
-
-}
-
-.glowing-btn:hover .faulty-letter {
-  animation: none;
-  text-shadow: none;
-  opacity: 1;
-}
-
-.glowing-btn:hover:before {
-  filter: blur(1.5em);
-  opacity: 1;
-}
-
-.glowing-btn:hover:after {
-  opacity: 1;
-} */
-
-/* @keyframes faulty-flicker {
-  0% {
-    opacity: 0.1;
-  }
-
-  2% {
-    opacity: 0.1;
-  }
-
-  4% {
-    opacity: 0.5;
-  }
-
-  19% {
-    opacity: 0.5;
-  }
-
-  21% {
-    opacity: 0.1;
-  }
-
-  23% {
-    opacity: 1;
-  }
-
-  80% {
-    opacity: 0.5;
-  }
-
-  83% {
-    opacity: 0.4;
-  }
-
-  87% {
-    opacity: 1;
-  }
-} */
 
 @keyframes text-flicker {
   0% {
@@ -571,3 +491,20 @@ footer .icon:hover{
     opacity: 1;
   }
 }
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #f71364 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #f71364;
+    border-radius: 10px;
+  }

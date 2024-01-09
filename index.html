@@ -15,15 +15,14 @@
   <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Latest compiled and minified CSS -->
 </head>
 <body class="bg-black text-white mt-0" data-bs-spy="scroll" data-bs-target="#navScroll">
   <header>
-    <nav class="navbar navbar-dark bg-black fixed-top px-vw-5 navbar-expand-lg scroll-efect ">
+    <nav id="page-top" class="navbar navbar-dark bg-black fixed-top px-vw-5 navbar-expand-lg scroll-efect ">
       <div class="nav-container ">
         <a class=" offcanvas-title navbar-brand pe-md-4 fs-4  col-md-auto text-center"
           id="offcanvasNavbarLabel" href="index.html">
-          <img  src="/img/logo.png" alt="Logo">
+          <img class="headerLogo" src="/img/logo.png" alt="Logo">
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -35,39 +34,36 @@
           <div class="offcanvas-header">
             <a>
               <img src="/img/icon.png" alt="">
-              <!-- <span class="ms-md-1 mt-1 fw-bolder me-md-5 ">Copernicus</span> -->
+              <span class="ms-md-1 mt-1 fw-bolder me-md-5 ">Copernicus</span>
             </a>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
 
-          <div class="offcanvas-body  text-capitalize  justify-content-end ">
+          <div class="offcanvas-body text-capitalize justify-content-end ">
             <ul class="navbar-nav list-group-vertical mb-2 mb-lg-0 list-group pe-3  ">
-              <li class="nav-item ">
-                <a class="nav-link  " href="#about" aria-label="Homepage">
+              <li class="nav-item">
+                <a class="nav-link" href="#about" aria-label="Homepage">
                   Sobre
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="#Services" aria-label="A sample content page">
+                <a class="nav-link" href="#Services" aria-label="A sample content page">
                   Serviços
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#contact" aria-label="A system message page">
-                  Contact
+                  Contato
                 </a>
               </li>
-
             </ul>
-
           </div>
         </div>
       </div>
     </nav>
   </header>
 
-
-  <main id="page-top">
+  <main id="">
     <div class="w-100 overflow-hidden position-relative bg-black text-white scroll-efect" data-aos="fade">
       <div class="position-absolute w-100 h-100 bg-black opacity-75 top-0 start-0"></div>
       <div class="container py-vh-4 position-relative mt-5 px-vw-5 text-center">
@@ -466,109 +462,40 @@
           </div>
         </div>
       </div>
-
-
     </div>
-    <div class="h-100 container-fluid" id="contact">
-      <div class="h-100 row d-flex align-items-stretch">
-        <div class="col-12 col-md-7 col-lg-6 col-xl-5 d-flex align-items-start flex-column px-vw-5">
-          <header class="mb-auto py-vh-2 col-12">
-            <a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href="index.html">
-             <img style="width: 100px ; height: 100%;" src="/img/mail-alt-svgrepo-com.png" alt="Image-e-mail">
-              <span class="ms-md-1 mt-1 fw-bolder me-md-5">CONTACT</span>
-            </a>
-          </header>
-
-          <!-- <h1>Register a new account</h1> -->
-          <form class="row ">
-            <div class="col-12">
-              <div class="mb-3">
-                <label for="exampleInputEmail1 " class="form-label">You Name</label>
-                <input type="name" class="form-control form-control-lg bg-gray-800 border-dark" id="exampleInputEmail1"
-                  aria-describedby="emailHelp" placeholder="name">
-                <div id="emailHelp" class="form-text">*Nunca compartilharemos seu e-mail com mais ninguém.</div>
-              </div>
-              <div class="mb-3">
-                <label for="exampleInputEmail1 " class="form-label">E-mail address</label>
-                <input type="email" class="form-control form-control-lg bg-gray-800 border-dark" id="exampleInputEmail1"
-                  aria-describedby="emailHelp" placeholder="name@example.com">
-
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Assunto<z /label>
-                    <input type="text" class="form-control form-control-lg bg-gray-800 border-dark"
-                      placeholder="Subject" style="height: 55px;" id="exampleFormControlTextarea1">
-              </div>
-              <div class="mb-3 ">
-                <textarea type="text" class="form-control form-control-lg bg-gray-800 border-dark" rows="3"
-                  placeholder="Message" id="exampleFormControlTextarea1"></textarea>
-              </div>
-              <button type="submit" class="btn btn-white btn-xl mb-4 w-100 py-3">Submit</button>
-            </div>
-          </form>
-
-        </div>
-        <div class="col-12 col-md-5 col-lg-6 col-xl-7 gradient rounded-5 ">
-          <div class="col-lg-7 justify-content-center">
-            <div class="h-100 p-7  py-vh-6">
-              <h2 class="text-white mb-4">Get In Touch</h2>
-              <div class="d-flex mb-4">
-                <div class="rounded-circle d-flex align-items-center justify-content-center"
-                  style="width: 60px; height: 60px;">
-                  <i class="bi bi-geo-alt fs-4 text-white"></i>
-                </div>
-                <div class="ps-3">
-                  <h5 class="text-white">Our Office</h5>
-                  <span class="text-white">123 Street, New York, USA</span>
-                </div>
-              </div>
-              <div class="d-flex mb-4">
-                <div class=" rounded-circle d-flex align-items-center justify-content-center"
-                  style="width: 60px; height: 60px;">
-                  <i class="bi bi-envelope-open fs-4 text-white"></i>
-                </div>
-                <div class="ps-3">
-                  <h5 class="text-white">Email Us</h5>
-                  <span class="text-white">info@example.com</span>
-                </div>
-              </div>
-              <div class="d-flex">
-                <div class=" rounded-circle d-flex align-items-center justify-content-center"
-                  style="width: 60px; height: 60px;">
-                  <i class="bi bi-phone-vibrate fs-4 text-white"></i>
-                </div>
-                <div class="ps-3">
-                  <h5 class="text-white">Call Us</h5>
-                  <span class="text-white">+012 345 6789</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
+  </main> 
 
   <footer class="bg-black border-top border-dark scroll-efect">
-
-    <div class=" text-center small py-vh-2 border-top border-dark ">
-
-      <!-- <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a> -->
-      <a class="icon btn btn-secondary btn-square  me-2 " href="#"><i class="fab fa-facebook-f"></i></a>
-      <a class="icon btn btn-secondary btn-square  me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-      <a class="icon btn btn-secondary btn-square " href="#"><i class="bi bi-instagram"></i></a>
-      <p class="mb-0 py-3">&copy; <a class="text-warning fw-bold" href="/">Copernicvs </a>Todos os direitos reservados
-        2023</p>
-
-    </div>
-    <div>
-
-      <a href="#page-top" class="icon btn btn-secondary py-3 mb-3 fs-6 back-to-top rounded-circle "><i class="bi bi-arrow-up"></i></a>
-    </div>
-
-
-
-
+      <div class="separator"></div>
+      <div class="row">
+        <div class="footerLogo col-4">
+          <div class="logo">
+            <img src="./img/logo.png" alt="">
+          </div>
+        </div>
+        <div class="navFooter col">
+          <ul>
+            <li><a href="#">INICIO</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">PROJETOS</a></li>
+            <li><a href="#">SOBRE</a></li>
+            <li><a href="#">CONTATO</a></li>
+          </ul>
+        </div>
+        <div class="socialMedia col-2">
+          <a target="_blank" href="https://www.instagram.com/copernicvs.tic/"><img clas src="./img/instagram.svg" alt="instagram logo"></a>
+          <a href="#"><img src="./img/linkedin.svg" alt=" linkedin"></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="copyright">
+          <p>© Copernicvs Todos os direitos reservados 2024</p>
+        </div>
+      </div>
+    
+      <div>
+        <a href="#page-top" class="staticButton back-to-top rounded-circle"><img src="./img/ArrowUp.svg" alt=""></a>
+      </div>
   </footer>
 
 
@@ -576,35 +503,11 @@
   <script src="js/aos.js"></script>
   <script>
     AOS.init({
-      duration: 800, // values from 0 to 3000, with step 50ms
+      duration: 800,
     });
   </script>
   <script>
-    // Facts counter
-    // $('[data-toggle="counter-up"]').counterUp({
-    //   delay: 10,
-    //   time: 2000
-    // });
-    // AOS.init({
-    //   duration: 800, // values from 0 to 3000, with step 50ms
-    // });
-    // let scrollpos = window.scrollY
-    // const header = document.querySelector(".navbar")
-    // const header_height = header.offsetHeight
-
-    // const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
-    // const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
-
-    // window.addEventListener('scroll', function () {
-    //   scrollpos = window.scrollY;
-
-    //   if (scrollpos >= header_height) { add_class_on_scroll() }
-    //   else { remove_class_on_scroll() }
-
-    //   console.log(scrollpos)
-    // });
   </script>
-  <!-- Template Javascript -->
   <script type="text/Javascript" src="js/jquery-3.1.1.min.js"></script>
   <script type="text/Javascript" src="js/main.js"></script>
 
