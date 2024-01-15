@@ -277,7 +277,7 @@ a.button-link {
 }
 .card-edit .number{
   font-family: sans-serif;
-  font-size: 61px;
+  font-size: 50px;
   font-style: normal;
   
 }
@@ -306,27 +306,7 @@ a.button-link {
 
 /*copy until here */
 
-footer .icon{
-  background: transparent;
-  background: linear-gradient( 
-    to top, 
-    hwb(261 13% 2%), 
-    hsl(283, 79%, 37%),
-    hsl(308, 86%, 56%) );
-    color: aliceblue;
 
-}
-footer .icon:hover{
-  background: transparent;
-  background: linear-gradient( 
-    to top, 
-    hwb(261 13% 2%), 
-    hsl(308, 86%, 56%)
-     );
-    color: aliceblue;
-  
-
-}
 
 @-webkit-keyframes scroll {
   0% {
@@ -399,6 +379,65 @@ footer .icon:hover{
   margin: 0 1em;
 
 }
+footer{
+
+}
+.separator{
+  height: .3rem;  
+  width: auto;
+  background: linear-gradient(90deg, #CE47FF 14.39%, #F71364 31.22%, #F71364 64.87%, #CE47FF 86.18%);
+}
+.footer-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15rem;
+}
+.logo{
+  padding-left: 5rem;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #F71364;
+}
+
+.nav-footer{
+  padding-left: 4rem;
+  color: #7C7C7C;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: #7C7C7C;
+}
+a:hover{
+  color: white;
+}
+
+
+.socialMedia{
+
+  gap: 1rem;
+  display: flex;
+  margin: 2rem
+}
+
+.copyright{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  height: 3rem;
+  color: #7C7C7C;
+}
 
 /* ============================================================= MEdia Query ==================================================== */
 
@@ -426,9 +465,7 @@ footer .icon:hover{
   }
 
 
-  .glowing-btn {
-    display: none;
-  }
+
   .card{
     padding: 0;
     height: auto;
@@ -467,15 +504,18 @@ footer .icon:hover{
     display: none;
   }
 
-  .glowing-btn {
-    display: none;
-  }
+ 
   .card-edit{
     width: 18.75rem;
    
   }
 
 }
+@media only screen and (max-width: 600px) {
+  
+ 
+}
+
 
 @media only screen and (max-width: 625px) {
   .nav-container {
@@ -493,52 +533,17 @@ footer .icon:hover{
     display: none;
   }
 
-  .glowing-btn {
-    display: none;
-  }
+  
 
 
 }
 
-@media only screen and (max-width: 600px) {
-  .glowing-btn {
-    font-size: 1em;
-  }
- 
-}
 
 /* ============================================================== end media query ======================================================== */
 
 /* ================================================== neon efect button ================================================================== */
 
-@import url("https://fonts.googleapis.com/css?family=Raleway");
-
-:root {
-  --glow-color: hsl(293, 100%, 69%);
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
 
 
-.glowing-txt {
-  float: left;
-  
-  width: 18.65rem;
-  margin-right: -0.8em;
-  -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
-    0 0 0.45em var(--glow-color);
-  -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
-    0 0 0.45em var(--glow-color);
-  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
-  animation: text-flicker 3s linear infinite;
 
-}
-.glowing-btn:hover .glowing-txt {
-  animation: none;
-
-}
