@@ -20,14 +20,31 @@ header {
 .navbar {
   padding: 0 !important;
   z-index: 100;
-  position: fixed;  
+  position: fixed; 
+  background: transparent !important; 
+}
+.scrolled{
+  background-color: yellowgreen;
+}
+#header {
+  transition: 0.2s;
 }
 
 li .nav-link{
   font-size: 1rem !important;
   
 }
-
+.backgrund-image {
+  background-image: url(/assets/img/header.png);
+  background-repeat: no-repeat;
+  background-size:auto ;
+  
+  
+  background-position: right;
+}
+.bg-efect{
+  background: #000000;
+}
 .card {
   max-width: 500px;
   min-height: 300px;
@@ -37,12 +54,13 @@ li .nav-link{
   text-align: start;
   height: auto;
   padding: 0.4em 0.8em;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, .25);
   border-radius: 20px;
-  background-color: rgba(56, 55, 55, 0.45);
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(15px);
+  background: linear-gradient(146deg, rgba(115, 115, 115, 0.40) 0%, rgba(36, 36, 36, 0.10) 100%);
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.10);
+ 
 }
+
 .card img{
   width: 7rem;
   height: 100px;
@@ -293,6 +311,9 @@ a.button-link {
   font-size: 0.65em;
   color: rgb(255, 255, 255);
 } 
+.footer-cards-slide p{
+  font-size: 20px;
+}
 
 .container-technology{
   display: flex;
@@ -379,8 +400,9 @@ a.button-link {
   margin: 0 1em;
 
 }
-footer{
-
+footer .container-footer{
+  display: flex;
+  justify-content: center;
 }
 .separator{
   height: .3rem;  
@@ -394,20 +416,20 @@ footer{
   height: 15rem;
 }
 .logo{
-  padding-left: 5rem;
-  height: 20rem;
+
+  height: 13rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-right: 1px solid #F71364;
+
 }
 
 .nav-footer{
-  padding-left: 4rem;
+     
   color: #7C7C7C;
   display: flex;
   align-items: center;
-  justify-content: start;
 }
 
 li{
@@ -424,10 +446,10 @@ a:hover{
 
 
 .socialMedia{
-
   gap: 1rem;
   display: flex;
-  margin: 2rem
+  margin: 1rem;
+  justify-content: center;
 }
 
 .copyright{
@@ -437,6 +459,16 @@ a:hover{
   font-size: 1rem;
   height: 3rem;
   color: #7C7C7C;
+}
+ /* <-- Start Fixed Button --> */
+ .staticButton{
+      position: fixed;
+    right: 30px;
+    bottom: 1em;
+    padding: 1em;
+    border-radius: 4px;
+    z-index: 99;
+    background-color: #F71364;
 }
 
 /* ============================================================= MEdia Query ==================================================== */
@@ -500,9 +532,7 @@ a:hover{
     margin: 0 auto;
   }
 
-  .logo {
-    display: none;
-  }
+
 
  
   .card-edit{
@@ -510,10 +540,6 @@ a:hover{
    
   }
 
-}
-@media only screen and (max-width: 600px) {
-  
- 
 }
 
 
@@ -528,12 +554,20 @@ a:hover{
   .nav-container li:nth-child(3) {
     margin-right: 0;
   }
-
-  .logo {
-    display: none;
+  .footer-cards-slide p{
+    font-size: 15px;
   }
 
+
+
+
+}
+@media only screen and (max-width: 525px) {
   
+  .logo img{
+    display: none !important;
+  }
+
 
 
 }
