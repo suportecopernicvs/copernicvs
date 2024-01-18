@@ -9,6 +9,7 @@
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="icon" type="image/png" sizes="180x180" href="assets/img/icon.png">
   <title>Copernicvs</title>
+  <link rel="stylesheet" href="/assets/email.php">
   <link rel="stylesheet" href="css/theme.min.css">
   <link rel="stylesheet" href=" icons8.com.br ">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
@@ -62,9 +63,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact" aria-label="A system message page">
-                  Contact
-                </a>
+                <a class="primary nav-link" onclick="window.dialog.showModal();">contact</a>
               </li>
 
             </ul>
@@ -417,11 +416,39 @@
         </div>
       </div>
     </div>
-
-
-    </div>
+    
+    <dialog id="dialog">
+      <h4>Contact</h4>
+      <form class="row " action="email.php" method="post">
+        <div class="col-12">
+          <div class="mb-3">
+            <label for="exampleInputEmail1 " class="form-label">You Name</label>
+            <input type="name" name="name" class="form-control form-control-lg bg-gray-800 border-dark" id="exampleInputEmail1"
+              aria-describedby="emailHelp" placeholder="name" required>
+            <div id="emailHelp" class="form-text">*Nunca compartilharemos seu e-mail com mais ninguém.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1 " class="form-label">E-mail address</label>
+            <input type="email" name="email" class="form-control form-control-lg bg-gray-800 border-dark" id="exampleInputEmail1"
+              aria-describedby="emailHelp" placeholder="name@example.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Assunto</label>
+                <input type="text" name="subject" class="form-control form-control-lg bg-gray-800 border-dark"
+                  placeholder="Subject" style="height: 55px;" id="exampleFormControlTextarea1">
+          </div>
+          <div class="mb-3 ">
+            <textarea type="text" name="message" class="form-control form-control-lg bg-gray-800 border-dark" rows="3"
+              placeholder="Message" id="exampleFormControlTextarea1" required></textarea>
+          </div>
+          <input type="submit" name="enviar" class="input-button mb-4 w-100 py-3 " placeholder="Enviar">
+        </div>
+      </form>
+      
+      <button onclick="window.dialog.close();" aria-label="close" class="x">❌</button>
+    </dialog>    
   </main>
-
+  
   <footer class="bg-black border-top border-dark scroll-efect">
     <div class="separator"></div>
 
@@ -436,7 +463,8 @@
           <li><a href="#">INICIO</a></li>
           <li><a href="#">SOBRE</a></li>
           <li><a href="#">SERVIÇOS</a></li>
-          <li><a href="#">CONTATO</a></li>
+          <li><a class="primary" onclick="window.dialog.showModal();">CONTACT</a></li>
+
           <!-- <li><a href="#">PROJETOS</a></li> -->
         </ul>
       </div>

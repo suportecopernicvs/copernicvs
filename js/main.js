@@ -29,7 +29,7 @@ function smoothScrollTo(endX, endY, duration) {
   const distanceY = endY - startY;
   const startTime = new Date().getTime();
 
-  duration = typeof duration !== "undefined" ? duration : 2000;
+  duration = typeof duration !== "undefined" ? duration : 1000;
 
   const easeInOutQuart = (time, from, distance, duration) => {
     if ((time /= duration / 2) < 1)
@@ -45,5 +45,5 @@ function smoothScrollTo(endX, endY, duration) {
       clearInterval(timer);
     }
     window.scroll(newX, newY);
-  }, 1000 / 60);
+  }, 100 / 60);
 }
