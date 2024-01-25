@@ -1,10 +1,10 @@
-
 html,
 body {
   scroll-behavior: smooth;
   text-decoration: none;
   font-family: sans-serif;
   overflow-x: hidden;
+
 
 }
 
@@ -20,26 +20,24 @@ header {
 .navbar {
   padding: 0 !important;
   z-index: 100;
-  position: fixed; 
-  background: transparent !important; 
+  position: fixed;
+  background: transparent !important;
 }
-.scrolled{
-  background-color: yellowgreen;
-}
+
 #header {
   transition: 0.2s;
 }
 
 li .nav-link{
   font-size: 1rem !important;
-  
+
 }
 .backgrund-image {
   background-image: url(/assets/img/header.png);
   background-repeat: no-repeat;
   background-size:auto ;
-  
-  
+
+
   background-position: right;
 }
 .bg-efect{
@@ -58,7 +56,7 @@ li .nav-link{
   border-radius: 20px;
   background: linear-gradient(146deg, rgba(115, 115, 115, 0.40) 0%, rgba(36, 36, 36, 0.10) 100%);
   box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.10);
- 
+
 }
 
 .card img{
@@ -74,19 +72,19 @@ li .nav-link{
   padding: 0 0.4em;
 }
 .card-footer h5{
-  font-size: 3em;   
+  font-size: 3em;
 
 }
 .card-footer p{
-  font-size: 2em;    
+  font-size: 2em;
 }
 
 .imagebg{
-  
+
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
- }
+}
 
 .nav-container {
   width: 100%;
@@ -95,7 +93,7 @@ li .nav-link{
   display: flex;
   justify-content: flex-end;
   align-items: center;
- 
+
 
 }
 
@@ -119,7 +117,8 @@ li .nav-link{
 
 .nav-item {
   margin: 0 1.5rem;
-  
+  cursor: pointer;
+
 }
 
 .nav-container li:nth-child(5) {
@@ -144,13 +143,17 @@ a.button-link {
 }
 
 .offcanvas-end {
-  background-color: rgb(25, 45, 80) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+ 
+  background:transparent;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(30px);
 
 }
 
 .offcanvas-end .nav-item a {
   transition: 0.8s;
-  
+
 }
 
 .modal-body form {
@@ -165,6 +168,18 @@ a.button-link {
   border-radius: 4px;
   z-index: 99;
   background: aqua;
+}
+.input-button{
+  background: white;
+  border-radius: 30px;
+  color: black;
+  text-transform: math-auto;
+  transition: .5s;
+
+}
+.input-button:hover{
+  color: #ffffff;
+  background-color: #272727;
 }
 
 .btn-scroll{
@@ -187,7 +202,7 @@ a.button-link {
   border: calc(var(--sizeX) / 10) solid var(--color);
   border-radius: 50px;
   box-sizing: border-box;
-  
+
 }
 
 .scrolldown::before {
@@ -260,7 +275,7 @@ a.button-link {
 .cards-slide-container{
   display: flex;
   padding: 0 3em;
-  
+
   overflow-x: auto;
 
 }
@@ -297,7 +312,7 @@ a.button-link {
   font-family: sans-serif;
   font-size: 50px;
   font-style: normal;
-  
+
 }
 .card-edit h5 {
   color: #C9C9C9;
@@ -310,7 +325,7 @@ a.button-link {
 .footer-cards-slide {
   font-size: 0.65em;
   color: rgb(255, 255, 255);
-} 
+}
 .footer-cards-slide p{
   font-size: 20px;
 }
@@ -374,7 +389,7 @@ a.button-link {
 }
 .slider .slide-track {
   -webkit-animation: scroll 40s linear infinite;
-          animation: scroll 40s linear infinite;
+  animation: scroll 40s linear infinite;
   display: flex;
   width: calc(250px * 14);
 }
@@ -386,11 +401,11 @@ a.button-link {
   justify-content: center;
 }
 .slide{
- 
+
   display: flex;
   flex-direction: column;
-   
- 
+
+
   padding: 1.9em 0.8em;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
@@ -400,12 +415,89 @@ a.button-link {
   margin: 0 1em;
 
 }
+/*Dialog Styles*/
+dialog {
+  padding: 1rem 3rem;
+  background: rgb(0, 0, 0);
+  max-width: 600px;
+  padding-top: 2rem;
+  border-radius: 20px;
+  border: 0;
+
+  animation: fadeIn 1s ease both;
+  &::backdrop {
+    animation: fadeIn 1s ease both;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    backdrop-filter: blur(10px);
+  }
+  .x {
+    filter: grayscale(1);
+    border: none;
+    background: none;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    transition: ease filter, transform 0.3s;
+    cursor: pointer;
+    transform-origin: center;
+    &:hover {
+      filter: grayscale(0);
+      transform: scale(1.1);
+    }
+  }
+  h4 {
+    font-weight: 600;
+    font-size: 2rem;
+    padding:0 1rem;
+    color: #fff;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    padding: 0.5rem 0;
+    a {
+      &:visited {
+        color: rgb(var(--vs-primary));
+      }
+    }
+  }
+}
+
+/*General Styles*/
+button.primary {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #fff !important;
+  background: rgb(var(--vs-primary) / 100%);
+  padding: 13px 25px;
+  border-radius: 17px;
+  transition: background-color 0.1s ease;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -10px rgb(var(--vs-primary) / 50%);
+  &:hover {
+    box-shadow: 0 20px 20px -10px rgb(var(--vs-primary) / 50%);
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 footer .container-footer{
   display: flex;
   justify-content: center;
 }
 .separator{
-  height: .3rem;  
+  height: .3rem;
   width: auto;
   background: linear-gradient(90deg, #CE47FF 14.39%, #F71364 31.22%, #F71364 64.87%, #CE47FF 86.18%);
 }
@@ -426,7 +518,7 @@ footer .container-footer{
 }
 
 .nav-footer{
-     
+
   color: #7C7C7C;
   display: flex;
   align-items: center;
@@ -452,7 +544,7 @@ a:hover{
   justify-content: center;
 }
 
-.copyright{
+.copyright {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -460,15 +552,25 @@ a:hover{
   height: 3rem;
   color: #7C7C7C;
 }
- /* <-- Start Fixed Button --> */
- .staticButton{
-      position: fixed;
-    right: 30px;
-    bottom: 1em;
-    padding: 1em;
-    border-radius: 4px;
-    z-index: 99;
-    background-color: #F71364;
+/* <-- Start Fixed Button --> */
+ .scrollup{
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 60px;
+  height: 60px;
+  background-color: #F71364;
+   text-indent: -9999px;
+  background-image: url(/assets/img/ArrowUp.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 999997;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.scrollup:hover {
+  opacity: 0.9;
 }
 
 /* ============================================================= MEdia Query ==================================================== */
@@ -476,10 +578,14 @@ a:hover{
 
 @media only screen and (max-width: 992px) {
   .nav-container {
-    margin: 0 1em;
+    margin: 0;
     display: flex;
     justify-content: space-between;
+    width: 100%;
     
+  
+    padding: 1em;
+
   }
 
   .nav-container ul {
@@ -501,24 +607,24 @@ a:hover{
   .card{
     padding: 0;
     height: auto;
-    
+
   }
-  .card img{
+.card img{
     width: 7rem;
     padding: 0.5em;
   }
-  .card-footer h5{
-    font-size: 2em;   
+.card-footer h5{
+    font-size: 2em;
 
   }
-  .card-footer p{
-    font-size: 1.8em;    
+.card-footer p{
+    font-size: 1.8em;
   }
-  .icons-img img{
+.icons-img img{
     width: 30%;
     height: auto;
   }
-  .icons-img, .p-3 .p-2 .pt-3 .pt-4{
+.icons-img, .p-3 .p-2 .pt-3 .pt-4{
     font-size: 15px;
     font-family: system-ui;
   }
@@ -526,35 +632,22 @@ a:hover{
 }
 
 @media only screen and (max-width: 767px) {
-
-  .nav-container {
-    width: 80%;
-    margin: 0 auto;
-  }
-
-
-
  
-  .card-edit{
+  .card-edit {
     width: 18.75rem;
-   
+  
   }
 
 }
 
 
 @media only screen and (max-width: 625px) {
-  .nav-container {
-    width: 100%;
-    margin: 0;
-    justify-content: space-between;
-    padding: 1em;
-  }
+ 
 
   .nav-container li:nth-child(3) {
     margin-right: 0;
   }
-  .footer-cards-slide p{
+.footer-cards-slide p{
     font-size: 15px;
   }
 
@@ -563,8 +656,8 @@ a:hover{
 
 }
 @media only screen and (max-width: 525px) {
-  
-  .logo img{
+
+  .logo img {
     display: none !important;
   }
 
@@ -573,9 +666,7 @@ a:hover{
 }
 
 
-/* ============================================================== end media query ======================================================== */
 
-/* ================================================== neon efect button ================================================================== */
 
 
 
