@@ -135,7 +135,7 @@ a.button-link {
 
 .navbar-nav .dropdown-menu {
   color: white;
-  background-color: rgb(50, 134, 161) !important;
+  /* background-color: rgb(50, 134, 161) !important; */
 }
 
 .dropdown-item:hover {
@@ -147,7 +147,9 @@ a.button-link {
  
   background:transparent;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(35px);
+  
 
 }
 
