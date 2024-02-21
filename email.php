@@ -11,7 +11,7 @@ if (isset($_POST['enviar'])) {
 
     try {
         //Server settings
-        $mail->SMTPDebug = SMTP::DEBUG_CONNECTION;                      
+        // $mail->SMTPDebug = SMTP::DEBUG_CONNECTION;                      
         $mail->isSMTP();                                            
         $mail->Host       = 'smtp.gmail.com';                    
         $mail->SMTPAuth   = true;                                   
@@ -23,7 +23,7 @@ if (isset($_POST['enviar'])) {
         //Recipients
         $mail->setFrom(' no-reply@copernicvs.com.br', '');
         $mail->addAddress('no-reply@copernicvs.com.br');
-        $mail->addReplyTo(' suporte.copernicvs@gmail.com', 'Information');   
+        $mail->addReplyTo(' suporte.copernicvs@gmail.com',);   
         $mail->isHTML(true);                                 
         $mail->Subject = 'Cliente Corpernicvs';
         
