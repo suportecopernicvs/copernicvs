@@ -21,9 +21,9 @@ if (isset($_POST['enviar'])) {
         $mail->Port       = 587;  //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //Recipients
-        $mail->setFrom(' no-reply@copernicvs.com.br', '');
-        $mail->addAddress('no-reply@copernicvs.com.br');
-        $mail->addReplyTo(' suporte.copernicvs@gmail.com',);   
+        $mail->setFrom('suporte.copernicvs@gmail.com',);
+        $mail->addAddress('suporte.copernicvs@gmail.com');
+        $mail->addReplyTo('suporte.copernicvs@gmail.com',);   
         $mail->isHTML(true);                                 
         $mail->Subject = 'Cliente Corpernicvs';
         
