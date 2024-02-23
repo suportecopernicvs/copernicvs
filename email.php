@@ -21,9 +21,9 @@ if (isset($_POST['enviar'])) {
         $mail->Port       = 587;  //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //Recipients
-        $mail->setFrom(' no-reply@copernicvs.com.br', '');
-        $mail->addAddress('no-reply@copernicvs.com.br');
-        $mail->addReplyTo(' suporte.copernicvs@gmail.com',);   
+        $mail->setFrom('suporte.copernicvs@gmail.com',);
+        $mail->addAddress('suporte.copernicvs@gmail.com');
+        $mail->addReplyTo('suporte.copernicvs@gmail.com',);   
         $mail->isHTML(true);                                 
         $mail->Subject = 'Cliente Corpernicvs';
         
@@ -38,8 +38,13 @@ if (isset($_POST['enviar'])) {
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
         $mail->send();
-        echo 'E-mail enviado com sucesso';
+        $mgm = "E-MAIL ENVIADO COM SUCESSO! <br> Equipe Copernicvs irá contacta-lo ";
+        echo "<meta http-equiv='refresh' content='10;URL=../index.html'>";
+        header("Location: index.html");
     } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        $mgm = "ERRO AO ENVIAR E-MAIL! {$mail->ErrorInfo}";
+        header("Location: index.html");
+        echo " ";
     }
 }
+       
