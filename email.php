@@ -38,8 +38,13 @@ if (isset($_POST['enviar'])) {
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
         $mail->send();
-        echo 'E-mail enviado com sucesso';
+        $mgm = "E-MAIL ENVIADO COM SUCESSO! <br> Equipe Copernicvs irá contacta-lo ";
+        echo "<meta http-equiv='refresh' content='10;URL=../index.html'>";
+        header("Location: index.html");
     } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        $mgm = "ERRO AO ENVIAR E-MAIL! {$mail->ErrorInfo}";
+        header("Location: index.html");
+        echo " ";
     }
 }
+       
