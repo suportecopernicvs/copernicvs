@@ -40,10 +40,22 @@ if (isset($_POST['enviar'])) {
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
-    echo "<meta http-equiv='refresh' content='10;URL=../index.html'>";
+    echo "<script>Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Something went wrong!',
+      footer: '<a href='>Why do I have this issue?</a>'
+    })</script>";
+    "<meta http-equiv='refresh' content='10;URL=../index.html'>"
     
   } catch (Exception $e) {
-    echo "<meta http-equiv='refresh' content='10;URL=../index.html'>";
+    echo "<meta http-equiv='refresh' content='10;URL=../index.html'>
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Something went wrong!',
+      footer: '<a href='>Why do I have this issue?</a>'
+    })";
     
   }
 }
