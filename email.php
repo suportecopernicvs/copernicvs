@@ -43,9 +43,7 @@ if (isset($_POST['enviar'])) {
 
     
 
-    echo 
-    "<meta http-equiv='refresh' content='10;URL=../index.html'>";
-    
+    echo "<meta http-equiv='refresh' content='10;URL=../index.html'>";    
     "<script>Swal.fire({
       icon: 'success',
       title: 'Oops...',
