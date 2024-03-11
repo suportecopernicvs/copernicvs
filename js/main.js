@@ -57,11 +57,11 @@ $(document).ready(function(){
       success:function(data){
         console.log(data);
         //Success Message == 'Title', 'Message body', Last one leave as it is
-      swal("¡Success!", "Enviado com sucesso, Por favor aguearde nosso contato!", "success");
+      swal("¡Success!", "Enviado com sucesso, Por favor aguarde nosso contato!", "success");
       },
       error:function(data){
         //Error Message == 'Title', 'Message body', Last one leave as it is
-      swal("Oops...", "Encotramos um problema para enviar seu e-mial, por favor no encaminhar uma mensagem no e-mial:suporte.copernicvs@gmail.com:(", "error");
+      swal("Oops...", "Encotramos um problema para enviar seu e-mail, por favor no encaminhar uma mensagem no e-mail:suporte.copernicvs@gmail.com:(", "error");
       }
     });
     e.preventDefault(); //This is to Avoid Page Refresh and Fire the Event "Click"
