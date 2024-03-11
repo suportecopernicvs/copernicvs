@@ -431,7 +431,7 @@
 
     <dialog id="dialog">
       <h4>Contact</h4>
-      <form class="row " id="contact-form" method="POST">
+      <form action="/email.php" class="row " method="POST">
         <div class="col-12">
           <div class="mb-3">
             <label for="exampleInputEmail1 " class="form-label">You Name</label>
@@ -537,12 +537,12 @@
 
 
   </script>
-  <script>
+  <!-- <script>
 
     $(document).ready(function () {
       $('#contact-form').on('submit', function (e) {  
         $.ajax({
-          url: 'email.php', 
+          url: '/email.php', 
           data: $(this).serialize(),
           type: 'POST',
           success: function (data) {
@@ -570,7 +570,7 @@
         e.preventDefault(); 
       });
     });
-  </script>
+  </script> -->
 
 
 </body>
