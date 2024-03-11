@@ -509,12 +509,12 @@
   <!-- Template Javascript -->
   <script type="text/Javascript" src="js/jquery-3.1.1.min.js"></script>
   <script type="text/Javascript" src="js/main.js"></script>
-  <script type="text/Javascript" src="js/sweetalet.js"></script>
+  <script type="text/Javascript" src="js/sweetalert.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.js"></script>
-  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script> 
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
@@ -537,7 +537,41 @@
 
 
   </script>
-  
+  <script>
+
+    $(document).ready(function () {
+      $('#contact-form').on('submit', function (e) {  
+        $.ajax({
+          url: 'email.php', 
+          data: $(this).serialize(),
+          type: 'POST',
+          success: function (data) {
+            console.log(data);
+            
+            Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "E-mail encaminhado com sucesso, por favor aguarde nosso contato",
+              showConfirmButton: false,
+              timer: 1500
+            });
+          },
+          error: function (data) {
+           
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Encotramos um erro para encmainhar seu e-mail, por favor entrar em contato via suporte.copernicvs@gmail.com!",
+              showConfirmButton: false,
+              timer: 1500
+            });
+          }
+        });
+        e.preventDefault(); 
+      });
+    });
+  </script>
+
 
 </body>
 
