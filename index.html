@@ -135,16 +135,13 @@
         <div class="row d-flex align-items-center">
           <div class="col-12 col-lg-7 text-lg-end" data-aos="fade-right">
             <span class="h5 text-secondary fw-lighter">O que fazermos?</span>
-            <h2 class="display-4 text-efect">Criamos soluções tecnológicas inovadoras que transformam a vida das pessoas
-              e impulsionam o crescimento dos negócios.</h2>
+            <h6 class="display-5 fs-3 text-efect">Bem-vindo à Copernicvs, sua casa de software para soluções inovadoras e personalizadas. Somos uma equipe apaixonada por tecnologia, comprometida em desenvolver produtos de alta qualidade que impulsionem o sucesso de nossos clientes.</h6>
           </div>
           <div class="col-12 col-lg-5" data-aos="fade-left">
             <h3 class="pt-5 text-efect">Sistema de desenvolvimento</h3>
-            <p class="text-secondary">Paginas web em uma unica tela ou varias diretamente para você poder se expressar
-              como quiser.</p>
+            <p class="text-secondary">Combinando criatividade, expertise técnica e um profundo entendimento das necessidades do mercado, criamos soluções sob medida para empresas de todos os tamanhos e setores. Desde aplicativos móveis intuitivos até sistemas complexos de gerenciamento de dados, estamos aqui para transformar suas ideias em realidade.</p>
             <h3 class="border-top border-secondary pt-5 mt-5 text-efect">Desenvolvimento web.</h3>
-            <p class="text-secondary"> Garantimos qualidade nos sites que fornecemos e adapabilidade de mudança de
-              layout.<br>
+            <p class="text-secondary">Nossa abordagem centrada no cliente garante que cada projeto seja entregue com excelência, dentro do prazo e do orçamento. Estamos sempre buscando inovação e aprimoramento contínuo, para garantir que nossos clientes estejam sempre à frente no mundo digital.<br>
               <path fill-rule="evenodd"
                 d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
               </svg>
@@ -431,7 +428,7 @@
 
     <dialog id="dialog">
       <h4>Contact</h4>
-      <form class="row " id="contact-form" method="POST">
+      <form action="/email.php" class="row " method="POST">
         <div class="col-12">
           <div class="mb-3">
             <label for="exampleInputEmail1 " class="form-label">You Name</label>
@@ -531,18 +528,13 @@
         document.getElementById("header").style.background = "transparent";
       }
     }
-
-
-
-
-
   </script>
   <script>
 
     $(document).ready(function () {
       $('#contact-form').on('submit', function (e) {  
         $.ajax({
-          url: 'email.php', 
+          url: '/email.php', 
           data: $(this).serialize(),
           type: 'POST',
           success: function (data) {
