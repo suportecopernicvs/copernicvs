@@ -5,18 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="icon" type="image/png" sizes="180x180" href="assets/img/icon.png">
   <title>Copernicvs</title>
-  <link rel="stylesheet" href="/assets/email.php">
-  <link rel="stylesheet" href="css/theme.min.css">
+  <link rel="stylesheet" href="/email.php">
   <link rel="stylesheet" href=" icons8.com.br ">
+  <link rel="stylesheet" href="css/theme.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.min.css " rel="stylesheet">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/style.css">
@@ -92,8 +90,8 @@
             <span class="h5 text-secondary fw-lighter">Nos somos a copernicvs</span>
             <h1 class="display-huge mt-3 mb-3 lh-1 fs-3 text-efect">PODEMOS TE AJUDAR A CONQUISTAR SEUS SEUS OBJETIVOS!
             </h1>
-            <p class="lead text-secondary">Fornecemos serviços excepcionais aos nossos clientes,
-              mantendo um ambiente de trabalho colaborativo e inclusivo que promova a criatividade e a excelência.</p>
+            <p class="lead text-secondary">Oferecemos serviços excepcionais aos nossos clientes, cultivando um ambiente de trabalho 
+              colaborativo e inclusivo que estimula a criatividade e busca pela excelência no desenvolvimento de sistemas.</p>
 
           </div>
           <div class="col-12 text-center btn-scroll scroll-efect">
@@ -135,13 +133,20 @@
         <div class="row d-flex align-items-center">
           <div class="col-12 col-lg-7 text-lg-end" data-aos="fade-right">
             <span class="h5 text-secondary fw-lighter">O que fazermos?</span>
-            <h6 class="display-5 fs-3 text-efect">Bem-vindo à Copernicvs, sua casa de software para soluções inovadoras e personalizadas. Somos uma equipe apaixonada por tecnologia, comprometida em desenvolver produtos de alta qualidade que impulsionem o sucesso de nossos clientes.</h6>
+            <h6 class="display-5 fs-3 text-efect">Bem-vindo à Copernicvs, sua casa de software para soluções inovadoras
+              e personalizadas. Somos uma equipe apaixonada por tecnologia, comprometida em desenvolver produtos de alta
+              qualidade que impulsionem o sucesso de nossos clientes.</h6>
           </div>
           <div class="col-12 col-lg-5" data-aos="fade-left">
             <h3 class="pt-5 text-efect">Sistema de desenvolvimento</h3>
-            <p class="text-secondary">Combinando criatividade, expertise técnica e um profundo entendimento das necessidades do mercado, criamos soluções sob medida para empresas de todos os tamanhos e setores. Desde aplicativos móveis intuitivos até sistemas complexos de gerenciamento de dados, estamos aqui para transformar suas ideias em realidade.</p>
+            <p class="text-secondary">Combinando criatividade, expertise técnica e um profundo entendimento das
+              necessidades do mercado, criamos soluções sob medida para empresas de todos os tamanhos e setores. Desde
+              aplicativos móveis intuitivos até sistemas complexos de gerenciamento de dados, estamos aqui para
+              transformar suas ideias em realidade.</p>
             <h3 class="border-top border-secondary pt-5 mt-5 text-efect">Desenvolvimento web.</h3>
-            <p class="text-secondary">Nossa abordagem centrada no cliente garante que cada projeto seja entregue com excelência, dentro do prazo e do orçamento. Estamos sempre buscando inovação e aprimoramento contínuo, para garantir que nossos clientes estejam sempre à frente no mundo digital.<br>
+            <p class="text-secondary">Nossa abordagem centrada no cliente garante que cada projeto seja entregue com
+              excelência, dentro do prazo e do orçamento. Estamos sempre buscando inovação e aprimoramento contínuo,
+              para garantir que nossos clientes estejam sempre à frente no mundo digital.<br>
               <path fill-rule="evenodd"
                 d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
               </svg>
@@ -425,10 +430,33 @@
         </div>
       </div>
     </div>
+    <template id="my-template">
+      <swal-title>
+        Save changes to "Untitled 1" before closing?
+      </swal-title>
+      <swal-icon type="warning" color="red"></swal-icon>
+      <swal-button type="confirm">
+        Save As
+      </swal-button>
+      <swal-button type="cancel">
+        Cancel
+      </swal-button>
+      <swal-button type="deny">
+        Close without Saving
+      </swal-button>
+      <swal-param name="allowEscapeKey" value="false" />
+      <swal-param
+        name="customClass"
+        value='{ "popup": "my-popup" }' />
+      <swal-function-param
+        name="didOpen"
+        value="popup => console.log(popup)" />
+    </template>
+   
 
     <dialog id="dialog">
       <h4>Contact</h4>
-      <form action="/email.php" class="row " method="POST">
+      <form action="email.php" role="form"  class="row " method="POST">
         <div class="col-12">
           <div class="mb-3">
             <label for="exampleInputEmail1 " class="form-label">You Name</label>
@@ -450,7 +478,8 @@
             <textarea type="text" name="message" class="form-control form-control-lg bg-gray-800 border-dark" rows="3"
               placeholder="Message" id="exampleFormControlTextarea1" required></textarea>
           </div>
-          <input type="submit" name="enviar" class="input-button mb-4 w-100 py-3 " placeholder="Enviar">
+          <input type="submit" name="enviar" class="input-button mb-4 w-100 py-3 "
+            placeholder="Enviar">
         </div>
       </form>
 
@@ -504,19 +533,19 @@
 
   </script>
   <!-- Template Javascript -->
-  <script type="text/Javascript" src="js/jquery-3.1.1.min.js"></script>
   <script type="text/Javascript" src="js/main.js"></script>
-  <script type="text/Javascript" src="js/sweetalert.js"></script>
+  <script type="text/Javascript" src="js/jquery-3.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.js"></script>
-  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
-
-
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+
   <script>
     // When the user scrolls down 50px from the top of the document, resize the header's font size
     window.onscroll = function () { scrollFunction() };
@@ -529,41 +558,6 @@
       }
     }
   </script>
-  <script>
-
-    $(document).ready(function () {
-      $('#contact-form').on('submit', function (e) {  
-        $.ajax({
-          url: '/email.php', 
-          data: $(this).serialize(),
-          type: 'POST',
-          success: function (data) {
-            console.log(data);
-            
-            Swal.fire({
-              position: "center",
-              icon: "success",
-              title: "E-mail encaminhado com sucesso, por favor aguarde nosso contato",
-              showConfirmButton: false,
-              timer: 1500
-            });
-          },
-          error: function (data) {
-           
-            Swal.fire({
-              icon: "error",
-              title: "Oops...",
-              text: "Encotramos um erro para encmainhar seu e-mail, por favor entrar em contato via suporte.copernicvs@gmail.com!",
-              showConfirmButton: false,
-              timer: 1500
-            });
-          }
-        });
-        e.preventDefault(); 
-      });
-    });
-  </script>
-
 
 </body>
 
