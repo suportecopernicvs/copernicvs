@@ -15,6 +15,7 @@ if (!empty($dados)) {
         $verificar_email->execute();
         $email_existente = $verificar_email->fetchColumn();
         
+        
         // Se o e-mail já existir, retorna um erro
         if ($email_existente > 0) {
             $retorna = ['status' => false, 'msg' => "Erro: Este e-mail já está cadastrado!"];
