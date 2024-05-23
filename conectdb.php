@@ -4,7 +4,7 @@
 $host = 'postgres';
 $dbname = 'cadastros';
 $user = 'postgres';
-$password = 'root';
+$password = 'bODeGruCRADELDowNfACKfoLIeFiET';
 
 try {
  
